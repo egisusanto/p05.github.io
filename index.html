@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10 Kawan Terbaik</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style type="text/css">
+	table{
+	font-family: sans-serif;
+	color: black;
+	border-collapse: collapse;
+	width: 100px;
+	border: 1px solid #cde05d;
+	background: rgb(233, 162, 55);
+	
+}
+	table tr th {
+	background: rgb(104, 151, 204);
+	color: white;
+	font-weight: normal;
+}
+
+	table, th, td {
+	padding: 8px 20px;
+	text-align: center;
+	
+
+}
+
+	table td:hover{
+	background-color: rgb(195, 243, 105);
+
+}
+	body{
+		background: lightgrey;
+	}
+    
+</style>
+</head>
+<body>
+	<h1 align="center">10 Kawan Terbaik</h1>
+	<table class="tabelku">
+
+<table class="tabelku" border="2" align="center">
+  <tr>
+  	<th>No</th>
+  	<th>Nama</th>
+  	<th>Alamat</th>
+  	<th>Aksi</th>
+  </tr>
+
+  <tr id="row__1">
+  	<td>1</td>
+  	<td class="nama_mhs">Farras</td>
+  	<td class="Alamat_mhs">Cirebon Timur</td>
+  	<td class="Hapus" id="Hapus__1">Hapus</td>
+  </tr>
+
+  <tr id="row__2">
+  	<td>2</td>
+  	<td class="nama_mhs">Ilham</td>
+  	<td class="Alamat_mhs">Cirebon Timur</td>
+  	<td class="Hapus" id="Hapus__2">Hapus</td>
+  </tr>
+
+  <tr id="row__3">
+  	<td>3</td>
+  	<td class="nama_mhs">Indra</td>
+  	<td class="Alamat_mhs">Cirebon Timur</td>
+  	<td class="Hapus" id="Hapus__3">Hapus</td>
+  </tr>
+
+  <tr id="row__4">
+  	<td>4</td>
+  	<td class="nama_mhs">Ibnu</td>
+  	<td class="Alamat_mhs">Cirebon Barat</td>
+  	<td class="Hapus" id="Hapus__4">Hapus</td>
+  </tr>
+
+   <tr id="row__5">
+  	<td>5</td>
+  	<td class="nama_mhs">Ichlas</td>
+  	<td class="Alamat_mhs">Cirebon Kota</td>
+  	<td class="Hapus" id="Hapus__5">Hapus</td>
+  </tr>
+
+  <tr id="row__6">
+    <td>5</td>
+    <td class="nama_mhs">Hardika</td>
+    <td class="Alamat_mhs">Cirebon Kota</td>
+    <td class="Hapus" id="Hapus__5">Hapus</td>
+</tr>
+
+<tr id="row__7">
+    <td>5</td>
+    <td class="nama_mhs">Anda</td>
+    <td class="Alamat_mhs">Cirebon</td>
+    <td class="Hapus" id="Hapus__5">Hapus</td>
+</tr>
+
+<tr id="row__8">
+    <td>5</td>
+    <td class="nama_mhs">Ikhfal</td>
+    <td class="Alamat_mhs">Cirebon Timur</td>
+    <td class="Hapus" id="Hapus__5">Hapus</td>
+</tr>
+
+<tr id="row__9">
+    <td>5</td>
+    <td class="nama_mhs">Ferdi</td>
+    <td class="Alamat_mhs">Cirebon Timur</td>
+    <td class="Hapus" id="Hapus__5">Hapus</td>
+</tr>
+
+<tr id="row__10">
+    <td>5</td>
+    <td class="nama_mhs">Arohman</td>
+    <td class="Alamat_mhs">Indramayu</td>
+    <td class="Hapus" id="Hapus__5">Hapus</td>
+</tr>
+	
+</table>
+</body>
+</html>
+<div class="tombol-back-teman-css" align="center" width="100">
+	<br>
+      <button a onclick="alert('Kamu ingin kembali?')" href="../index.html">Back to Home</button>
+    </div>
+
+<script>
+	$(document).ready(function(){
+		//alert(0)
+		$('.nama_mhs').click(function(){
+			//alert(1)
+			let isi = $(this).text();
+			//alert(isi);
+			let isi2 = prompt('ubah dengan:, isi');
+			if(!isi2) return;
+			//alert(isi2);
+
+			$(this).text(isi2);
+		})
+
+		$('.Hapus').click(function(){
+			//alert(1)
+			let yakin = confirm('yakin ingin menghapus?');
+			if(!yakin) return;
+
+			let id = $(this).prop('id');
+			//alert(id);
+
+			let rid = id.split('__');
+			let baris_ke = rid[1];
+
+			//alert(baris_ke);
+
+            $('#row__'+baris_ke).fadeOut();
+
+			//alert('Anda yakin')
+		})
+
+		$('.Alamat_mhs').click(function(){
+			//alert(1)
+			let isi = $(this).text();
+			//alert(isi);
+			let isi2 = prompt('ubah dengan:, isi');
+			if(!isi2) return;
+			//alert(isi2);
+			$(this).text(isi2);
+
+		})
+	})
+</script>
